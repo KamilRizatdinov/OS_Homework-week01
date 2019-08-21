@@ -1,0 +1,50 @@
+  412  mkdir week01
+  413  ls
+  414  cd week01/
+  415  ls
+  416  pwd
+  417  cd ..
+  418  ls
+  419  rm -rf OS_Homework-week01/ week01/ week1
+  420  ls
+  421  mk wee01
+  422  mkdir week01
+  423  ls week01/
+  424  d week01/
+  425  cd week01/
+  426  la
+  427  whoami 
+  428  hostname
+  429  man -h | head
+  430  head
+  431  man -h | head -n 3
+  432  ls usr/
+  433  ls ~/
+  434  ls /usr/bin/ | grep *.gcc
+  435  ls /usr/bin/
+  436  ls /usr/bin/ | grep *gcc
+  437  ls /usr/bin/ | grep gcc
+  438  ls /usr/bin/ | grep *gcc*
+  439  ls /usr/bin/ | grep gcc
+  440  ls /usr/bin/ | grep gcc | tail
+  441  ls /usr/bin/ | grep gcc | tail-n 3
+  442  ls /usr/bin/ | grep gcc | tail -n 3
+  443  ls /usr/bin/ | grep gcc | > ~/Innopolis/OS/week01/ex1.txt
+  444  cat ~/Innopolis/OS/week01/ex1.txt 
+  445  ls /usr/bin/ | grep gcc > ~/Innopolis/OS/week01/ex1.txt
+  446  cat ~/Innopolis/OS/week01/ex1.txt 
+  447  ls /usr/bin/ | tail -R | grep gcc > ~/Innopolis/OS/week01/ex1.txt
+  448  ls /usr/bin/
+  449  ls /usr/bin/ | tail -R
+  450  ls /usr/bin/ | tac
+  451  ls /usr/bin/ | sort -r
+  452  ls /usr/bin/ | grep gcc | sort -r > ~/Innopolis/OS/week01/ex1.txt
+  453  cat ~/Innopolis/OS/week01/ex1.txt 
+  454  history 
+  455  ls
+  456  history -n 10 > ex2.txt
+  457  cat ex2.txt 
+  458  history -n 10 
+  459  history | less -n 10
+  460  history | tail -n 10
+  461  history | tail -n 50 > ex2.txt
