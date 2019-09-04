@@ -23,11 +23,18 @@ void print_list(struct Node* list) {
 }
 
 
-void insert_node(struct Node* list, struct Node* node) {
-    while(list->next != NULL) {
-        list = list->next;
+void insert_node(struct Node** list, struct Node* node, int pos) {
+    if (pos == 0) {
+        node->next = *list;
+        *list = node;
+    } else {
+        struct Node* tmp = *list;
+        for (int i = 1; i < pos; ++i) {
+            tmp = tmp->next;
+        }
+        node->next = tmp->next;
+        tmp->next = node;
     }
-    list->next = node;
 }
 
 
@@ -44,19 +51,18 @@ void delete_node(struct Node** list, struct Node* node) {
 
 
 int main() {
-    struct Node* list = create_node(0);
-    struct Node* new_node = create_node(1);
+    struct Node* head = create_node(0);
+    struct Node* new_node1 = create_node(1);
     struct Node* new_node2 = create_node(2);
     struct Node* new_node3 = create_node(3);
 
 
-    insert_node(list, new_node);
-    insert_node(list, new_node2);
-    insert_node(list, new_node3);
-    delete_node(&list, list);
-    delete_node(&list, new_node);
-    delete_node(list, new_node2);
-    delete_node(&list, new_node3);
-    print_list(list);
+//    insert_node(&head, new_node1, 0);
+//    insert_node(&head, new_node2, 1);
+//    insert_node(&head, new_node3, 2);
+//    delete_node(&head, head);
+//    delete_node(&head, new_node2);
+//    delete_node(&head, new_node3);
+    print_list(head);
     return 0;
 }
