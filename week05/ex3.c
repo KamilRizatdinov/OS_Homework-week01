@@ -23,8 +23,9 @@ void* producer(void* arg) {
 	    pthread_cond_wait(&my_cond, &my_mutex);
 	}
 	
-	buffer[counter++] = 1;	
 	pthread_mutex_unlock(&my_mutex);
+	buffer[counter++] = 1;	
+	printf("[PRODUCER]: Counter = %d\n", counter);	
    }
 }
 
@@ -38,8 +39,9 @@ void* consumer(void* arg) {
 	    pthread_cond_wait(&my_cond, &my_mutex);
 	}
 	
-	buffer[--counter] = 0;	
 	pthread_mutex_unlock(&my_mutex);
+	buffer[--counter] = 0;	
+	printf("[CONSUMER]: Counter = %d\n", counter);	
    }
 }
 
