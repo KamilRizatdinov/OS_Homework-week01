@@ -1,8 +1,13 @@
-- Let [Vm] be the virtual address space
-- Let [Psz] be the page size (it is equivalent 
-for both virtual and physical address space)
-- Let [Adrsz] be the address size (it is equivalent 
-for both virtual and physical address space)
+Size of page is 8KB.
+Size of address is 16 bit.
+We need to find the number of entries (number of pages in table)
 
+Lets take a look on that address is:
+- First N bits are denoting the page number
+- Rest 16-N bits denoting the offset (in our task it is equal to 8KB)
 
-Number of entries is ([Vm] / [Psz]) * ([Psz] / [Adrsz]) = [Vm] / [Adrsz]
+8KB = 8*1024*8 = 2^16 => 
+there is only one page in the page table since there is no bits 
+in address which stand for the page number
+
+[ANSWER]: Threre is only one entry.
