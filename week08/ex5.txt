@@ -1,0 +1,6 @@
+Q: Difference between physical and virtual address?
+
+A: Virtual address is a program-generated address to a specific
+page (chunk of the program located in virtual memory) content. 
+Which can be mapped into the physical address of a specific page 
+frame content using the special CPU module called MMU (Memory Management System)

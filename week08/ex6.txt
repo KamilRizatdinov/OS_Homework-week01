@@ -1,0 +1,8 @@
+- Let [Vm] be the virtual address space
+- Let [Psz] be the page size (it is equivalent 
+for both virtual and physical address space)
+- Let [Adrsz] be the address size (it is equivalent 
+for both virtual and physical address space)
+
+
+Number of entries is ([Vm] / [Psz]) * ([Psz] / [Adrsz]) = [Vm] / [Adrsz]
