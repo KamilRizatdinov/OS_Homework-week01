@@ -1,0 +1,7 @@
+chmod 666 _ex3.txt
+chmod 707 _ex3.txt
+chmod 777 _ex3.txt
+
+660 gives Owner and Group permission to Read and Write and do not allow User nothing [rw-rw----]
+775 gives Owner and Group permission to Read, Write and Execute and allow User to Read and Execute [rwxrwxr-x]
+775 gives Owner, Group and User permission to Read, Write and Execute [rwxrwxrwx]
